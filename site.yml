@@ -5,7 +5,8 @@
   # remote_user: user
   # sudo: yes
 
-  roles: 
+  roles:
+    - common
     - mysql 
     - nginx
     - php-fpm
