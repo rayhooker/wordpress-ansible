@@ -13,6 +13,9 @@ sudo python ez_setup.py
 sudo easy_install pip
 sudo easy_install --upgrade pip
 wget https://bitbucket.org/pypa/setuptools/raw/0.8/ez_setup.py -O - | sudo python
+sudo apt-get install python-dev libmysqlclient-dev -y
+sudo apt-get install python-mysqldb
+
 SCRIPT
 
 $script = <<SCRIPT
