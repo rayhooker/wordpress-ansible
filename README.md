@@ -1,3 +1,5 @@
+## How to Deploy Using Vagrant and
+
 ## Wordpress+Nginx+PHP-FPM Deployment
 
 - Requires Ansible 1.2 or newer
@@ -11,7 +13,7 @@ you want to deploy.
 
 Then run the playbook, like this:
 
-	ansible-playbook -i hosts site.yml
+	ansible-playbook -i hosts redhatsite.yml
 
 The playbooks will configure MySQL, Wordpress, Nginx, and PHP-FPM. When the run
 is complete, you can hit access server to begin the Wordpress configuration.
