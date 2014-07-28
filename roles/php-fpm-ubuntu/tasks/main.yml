@@ -2,16 +2,13 @@
 - name: Install php-fpm and deps 
   apt: package={{ item }} state=present
   with_items:
-    - php
-    - php-fpm
-    - php-enchant
+    - php5
+    - libapache2-mod-php5
+    - php5-mcrypt
     - php-IDNA_Convert
     - php-mbstring
-    - php-mysql
-    - php-PHPMailer
-    - php-process
-    - php-simplepie
-    - php-xml
+    - php5-mysql 
+    - php5-xmlrpc
 
 - name: Disable default pool
   command: mv /etc/php-fpm.d/www.conf /etc/php-fpm.d/www.disabled creates=/etc/php-fpm.d/www.disabled
