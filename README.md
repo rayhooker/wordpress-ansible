@@ -11,6 +11,8 @@ mkdir wordpress
 - vagrant plugin install vagrant-vbguest
 - vagrant up
 
+Now simply fire up a browser on your local machine and point to http://localhost:8800. It should walk you through the Wordpress setup.
+
 ## Wordpress+Nginx+PHP-FPM Deployment
 
 - Requires Ansible 1.2 or newer
