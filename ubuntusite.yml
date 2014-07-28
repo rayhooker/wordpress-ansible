@@ -9,4 +9,4 @@
     - mysql-ubuntu
     - nginx-ubuntu
     - php-fpm-ubuntu
-    - wordpress
+    - wordpress-ubuntu
