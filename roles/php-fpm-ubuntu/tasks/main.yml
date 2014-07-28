@@ -3,15 +3,20 @@
   apt: package={{ item }} state=present
   with_items:
     - php5
+    - php5-cli
+    - php5-common
+    - php5-suhosin
+    - php5-fpm
+    - php5-cgi
     - libapache2-mod-php5
     - php5-mcrypt  
     - php5-mysql 
     - php5-xmlrpc
 
-#- name: Disable default pool
-#  command: mv /etc/php-fpm.d/www.conf /etc/php-fpm.d/www.disabled creates=/etc/php-fpm.d/www.disabled
-#  notify: restart php-fpm
+- name: Disable default pool
+  command: mv /etc/php-fpm.d/www.conf /etc/php-fpm.d/www.disabled creates=/etc/php-fpm.d/www.disabled
+  notify: restart php-fpm
  
-#- name: Copy php-fpm configuration
-#  template: src=wordpress.conf dest=/etc/php-fpm.d/
-#  notify: restart php-fpm
+- name: Copy php-fpm configuration
+  template: src=wordpress.conf dest=/etc/php-fpm.d/
+  notify: restart php-fpm
