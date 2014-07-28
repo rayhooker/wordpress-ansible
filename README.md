@@ -11,7 +11,7 @@ mkdir wordpress
 - vagrant plugin install vagrant-vbguest
 - vagrant up
 
-Now simply fire up a browser on your local machine and point to http://localhost:8800. It should walk you through the Wordpress setup.
+Now simply fire up a browser on your local machine and point to http://localhost:8800. It should walk you through the Wordpress setup.   Note that to stop the VM, simply navigate to the "wordpress" director and type "vagrant halt".  Navigating to the directory and typing "vagrant up" will bring it up again.  You can access the command line of the VM by typing "vagrant ssh".
 
 ## Wordpress+Nginx+PHP-FPM Deployment
 
