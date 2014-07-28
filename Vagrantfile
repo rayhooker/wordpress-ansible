@@ -72,19 +72,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network :private_network, ip: "192.168.35.10"
   config.vm.network :forwarded_port, guest: 80, host: 8800 
   config.ssh.insert_key = true
-  config.vm.boot_mode = gui
+  #config.vm.boot_mode = gui
 
   # Enable X11 forwarding so we can interact with GUI applications
   if ENV['VAGRANT_X11']
       config.ssh.forward_x11 = true
   end
 
-  config.vm.synced_folder "wordpress", "/srv/wordpress", :create => true, nfs: true
-  #config.vm.synced_folder "#{edx_configuration_dir}", "/edx/app/edx_ansible/edx_ansible", :create => true, nfs: true
-  #config.vm.synced_folder "#{edx_platform_mount_dir}", "/edx/app/edxapp/edx-platform", :create => true, nfs: true
-  #config.vm.synced_folder "#{forum_mount_dir}", "/edx/app/forum/c_comments_service", :create => true, nfs: true
-  #config.vm.synced_folder "#{ora_mount_dir}", "/edx/app/ora/ora", :create => true, nfs: true
-  #config.vm.synced_folder "#{edx_theme_dir}", "/edx/app/edxapp/themes/sas", :create => true, nfs: true
+  config.vm.synced_folder "wordpress-code", "/srv/wordpress", :create => true, nfs: true 
 
   config.vm.provider :virtualbox do |vb|
     vb.customize ["modifyvm", :id, "--memory", MEMORY.to_s]

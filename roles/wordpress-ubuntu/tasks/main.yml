@@ -26,5 +26,5 @@
 - name: Copy Wordpress config file
   template: src=wp-config.php dest=/srv/wordpress/
 
-- name: Change ownership of Wordpress installation
-  file: path=/srv/wordpress/ owner=wordpress group=wordpress state=directory recurse=yes
+#- name: Change ownership of Wordpress installation
+#  file: path=/srv/wordpress/ owner=wordpress group=wordpress state=directory recurse=yes
