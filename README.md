@@ -1,4 +1,15 @@
-## How to Deploy Using Vagrant and
+## How to Deploy Using Vagrant on Ubuntu 12.04
+
+Install the latest VirtualBox >= 4.3.12  (https://www.virtualbox.org/wiki/Downloads)
+Install the latest Vagrant(https://github.com/edx/configuration/wiki/Installing-Vagrant) >= 1.5.3 (for vagrant >= 1.6, you may need to apply these workarounds - https://github.com/mitchellh/vagrant/issues/3769)
+
+Download the Vagrantfile and create the Vagrant instance:
+mkdir wordpress
+
+- cd wordpress
+- curl -L https://raw.githubusercontent.com/rayhooker/configuration/master/Vagrantfile > Vagrantfile
+- vagrant plugin install vagrant-vbguest
+- vagrant up
 
 ## Wordpress+Nginx+PHP-FPM Deployment
 
