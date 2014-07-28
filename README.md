@@ -7,7 +7,7 @@ Download the Vagrantfile and create the Vagrant instance:
 mkdir wordpress
 
 - cd wordpress
-- curl -L https://raw.githubusercontent.com/rayhooker/configuration/master/Vagrantfile > Vagrantfile
+- curl -L https://raw.githubusercontent.com/rayhooker/wordpress-ansible/master/Vagrantfile > Vagrantfile
 - vagrant plugin install vagrant-vbguest
 - vagrant up
 
